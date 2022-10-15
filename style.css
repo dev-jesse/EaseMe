@@ -2,15 +2,25 @@
 
 html {
     height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
 body {
     margin: 0;
+    padding: 0;
     min-height: 100%;
+    min-width: 100%;
     background-color: #255560;
     overflow: hidden;
 }
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .options {
     position: absolute;
     left: 50%;
@@ -44,4 +54,80 @@ body {
 
 .person:hover {
     color: white;
+}
+
+/* .chat-container {
+    position: absolute;
+    display: flex;
+    left: 120px;
+    top: 140px;
+} */
+
+.chat-person {
+    position: absolute;
+    top: 170px;
+    left: 120px;
+    color: white;
+    width: 200px;
+}
+
+.chatbox {
+    position: absolute;
+    top: 140px;
+    left: 350px;
+}
+
+.request {
+    overflow: hidden;
+    width: 960px;
+    height: 250px;
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    top: 40px;
+    left: 90px;
+}
+
+.suggestions {
+    position: absolute;
+    display: flex;
+    left: 95px;
+    top: 331px;
+}
+
+.topic {
+    font-size: 1.3em;
+    border: 2px solid white;
+    width: 200px;
+    height: 60px;
+    border-width: 2px 4px;
+    border-radius: 40px;
+    margin: 20px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.feature {
+    display: flex;
+    position: absolute;
+    left: 110px;
+    bottom: 210px;
+}
+
+.send input {
+    width: 700px;
+    height: 67px;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.send button {
+    background-color: #255560;
+    width: 200px;
+    height: 67px;
+    border: none;
+}
+
+.send button:hover {
+    background-color: #172f34;
 }
