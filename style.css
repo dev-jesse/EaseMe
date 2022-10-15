@@ -11,6 +11,12 @@ body {
     background-color: #255560;
     overflow: hidden;
 }
+.options {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .main-text {
     font-family: 'Inter', sans-serif;
@@ -24,7 +30,7 @@ body {
 }
 
 .selection {
-    width: 65%;
+    width: 65vw;
     margin: auto;
     height: auto;
     /* display: flex;
