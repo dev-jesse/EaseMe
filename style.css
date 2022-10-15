@@ -77,9 +77,13 @@ body {
     left: 350px;
 }
 
+.chatbox img {
+    width: 863px;
+}
+
 .request {
     overflow: hidden;
-    width: 960px;
+    width: 730px;
     height: 250px;
     position: absolute;
     font-family: 'Inter', sans-serif;
@@ -92,7 +96,8 @@ body {
     position: absolute;
     display: flex;
     left: 95px;
-    top: 331px;
+    bottom: 100px;
+    width: 725px;
 }
 
 .topic {
@@ -102,7 +107,7 @@ body {
     height: 60px;
     border-width: 2px 4px;
     border-radius: 40px;
-    margin: 20px;
+    margin: 0 8px 15px;
     text-align: center;
     line-height: 60px;
 }
@@ -110,24 +115,30 @@ body {
 .feature {
     display: flex;
     position: absolute;
-    left: 110px;
-    bottom: 210px;
+    left: 90px;
+    bottom: 40px;
 }
 
 .send input {
-    width: 700px;
-    height: 67px;
+    width: 550px;
+    height: 55px;
     font-size: 1.5em;
     margin-right: 10px;
 }
 
 .send button {
     background-color: #255560;
-    width: 200px;
-    height: 67px;
+    width: 170px;
+    height: 55px;
     border: none;
 }
 
 .send button:hover {
     background-color: #172f34;
+}
+
+.send button:focus {
+    background-color: #255560;
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
 }
