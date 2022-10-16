@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import cohere
 from cohere.classify import Example
 from random import randint
+import json
 
 app = Flask(__name__)
 co = cohere.Client('NvfQrz8ZrBLdqprvUu1fDVC1fdYEvLLK9SYUDOwK')
@@ -12,10 +13,8 @@ replies = {
     'anxiety' : ["If you get too engrossed and involved and concerned in regard to things over which you have no control, it will adversely affect the things over which you have control", "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.", "The most important conversations you’ll ever have are the ones you’ll have with yourself", "we are all born so beautiful, the greatest tragedy is in being convinced we are not"],
     'laugh' :["How many flies does it take to screw in a lightbulb? Just two but I have no idea how they got in there.", "When does a joke become a dad joke? When it becomes apparent.", "What's blue and isn't very heavy?, Light blue"]
 }
-
-@app.route('/get')
 def get_response():
-    userText = request.args.get('msg')
+    userText = request.args.get('msg') # getting user's input
     
     response = co.classify( 
     model='large', 
@@ -25,17 +24,27 @@ def get_response():
     replies_list = replies[response.classifications[0].prediction]
     res = replies_list[randint(0, len(replies_list) - 1)]  # the quote we wat
     
-    request.args.update
-    
-    return
-
+    return (True, res)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/einsteinchat')
+@app.route('/einsteinchat', methods=['GET', 'POST'])
 def EinsteinChat():
-    return render_template('einsteinchat.html')
+    if request.method == 'POST':
+        m = json.loads(request.data, strict=False)
+        content = m.get("content")
+        id = m.get("id")
+        res= "none"
+        success = False
+        if id == 0:
+            success, res = get_response(content)
+        id += 1
+        if not success:
+            id = 3;
+        return jsonify(message = res)
+    else:
+        return render_template('einsteinchat.html')
 
 app.run(host='0.0.0.0', port=80)
