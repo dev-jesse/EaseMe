@@ -102,18 +102,6 @@ body {
     width: 725px;
 }
 
-.topic {
-    font-size: 1.3em;
-    border: 2px solid white;
-    width: 200px;
-    height: 60px;
-    border-width: 2px 4px;
-    border-radius: 40px;
-    margin: 0 8px 15px;
-    text-align: center;
-    line-height: 60px;
-}
-
 .feature {
     display: flex;
     position: absolute;
