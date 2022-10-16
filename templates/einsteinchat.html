@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images/favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     <title>EaseMe</title>
 </head>
 
 <body>
     <div class="container-fluid min-vh-100 min-vw-100">
         <div class="logo">
-            <a href="/#"><img src="./images/easeme-logo.svg" alt=""></a>
+            <a href="/#"><img src="{{ url_for('static', filename='images/easeme-logo.svg') }}" alt=""></a>
         </div>
         <div class="chat-container">
             <div class="chat-person d-flexbox text-center">
                 <div class="chat-pfp">
-                    <img src="./images/einstein-pfp.png" alt="">
+                    <img src="{{ url_for('static', filename='images/einstein-pfp.png') }}" alt="">
                 </div>
                 <div class="chat-desc mt-4">
                     <h2 class="person-name">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="chatbox">
-                <img src="./images/talk.png" alt="">
+                <img src="{{ url_for('static', filename='/images/talk.png') }}" alt="">
                 <div class="request">
                     Hi Kyle, I’m Einstein.<br>
                     What’s in your mind today?

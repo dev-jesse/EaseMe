@@ -50,10 +50,12 @@ body {
 .person {
     color: white;
     text-decoration: none;
+    filter: grayscale(100%);
 }
 
 .person:hover {
     color: white;
+    filter: grayscale(0);
 }
 
 /* .chat-container {

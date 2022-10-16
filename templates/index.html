@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/images/favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>EaseMe</title>
 </head>
 <body>
     <div class="container-fluid min-vh-100">
         <div class="logo">
-            <a href="/#"><img src="./images/easeme-logo.svg" alt=""></a>
+            <a href="/#"><img src="{{ url_for('static', filename='images/easeme-logo.svg') }}" alt=""></a>
         </div>
         <div class="options">
             <div class="main-text display-4 text-center my-5">
@@ -22,8 +22,8 @@
             </div>
             <div class="selection d-flex justify-content-around h-100">
                 <a href="/#" class="person">
-                    <div class="person-pfp">
-                        <img src="./images/picasso-pfp.png" alt="Picasso">
+                    <div class="person-pfp per-1">
+                        <img src="{{ url_for('static', filename='/images/color/c_picasso.png') }}" alt="Picasso">
                     </div>
                     <h2 class="person-name text-center mt-3">
                         Pablo Picasso
@@ -32,9 +32,9 @@
                         Artist <br> 1879 - 1955
                     </div>
                 </a>
-                <a href="./app.html" class="person">
-                    <div class="person-pfp pfp-1">
-                        <img src="./images/einstein-pfp.png" alt="Einstein">
+                <a href="/einsteinchat" class="person">
+                    <div class="person-pfp per-2">
+                        <img src="{{ url_for('static', filename='/images/color/c_albert.png') }}" alt="Einstein">
                     </div>
                     <h2 class="person-name text-center mt-3">
                         Albert Einstein
@@ -44,8 +44,8 @@
                     </div>
                 </a>
                 <a href="/#" class="person">
-                    <div class="person-pfp">
-                        <img src="./images/curie-pfp.png" alt="Curie">
+                    <div class="person-pfp per-3">
+                        <img src="{{ url_for('static', filename='/images/color/c_marie.png') }}" alt="Curie">
                     </div>
                     <h2 class="person-name text-center mt-3">
                         Marie Curie
