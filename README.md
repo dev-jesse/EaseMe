@@ -12,7 +12,7 @@ We used HTML, CSS, and javascript to build the user interface. With bootstrap, w
 ## Challenges we ran into 🧗✨
 This was our first time working on a chatbot and also the first time submitting a project to a hackathon for more than half of our team members.
 
-#As we have two UX designers and two coders, it was hard to speak in the same language regarding technical perspective and goals. But we started to understand and empathize with each other as we got into the second day of the hackathon.
+As we have two UX designers and two coders, it was hard to speak in the same language regarding technical perspective and goals. But we started to understand and empathize with each other as we got into the second day of the hackathon.
 
 Originally, we tried to create the machine learning feature utilizing a traditional method with tensorflow and tflearn, after transitioning to using cohere to process the user input, we ran into issues fine-tuning the algorithm and the bot miscategorizing user response.
 
